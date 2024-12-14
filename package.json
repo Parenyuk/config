@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:eslint-fix": "eslint . --fix",
+    "lint:prettier-fix": "prettier . --write",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky"
   },
@@ -25,12 +26,18 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "lint-staged": "^15.2.11",
     "postcss": "^8",
+    "prettier": "3.4.2",
+    "prettier-plugin-classnames": "^0.7.5",
+    "prettier-plugin-merge": "^0.7.2",
+    "prettier-plugin-tailwindcss": "^0.6.9",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
   "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown",
     "**/*.{ts,tsx}": [
       "eslint --fix"
     ]
