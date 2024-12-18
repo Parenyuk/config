@@ -11,7 +11,7 @@
     "lint:eslint-fix": "eslint . --fix",
     "lint:staged": "pretty-quick --staged",
     "lint:type-check": "tsc --noEmit",
-    "fix": "pnpm lint:prettier-fix && pnpm lint:eslint-fix && pnpm lint:staged",
+    "fix": "pnpm lint:eslint-fix && pnpm lint:staged",
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky"
   },
